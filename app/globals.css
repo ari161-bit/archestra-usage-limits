@@ -1,86 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-display: 'Playfair Display';
-  --font-body: 'DM Sans';
-  --font-mono: 'DM Mono';
-}
-
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #f8f7f4;
-  color: #211e1a;
+  background: #0d0d0d;
+  color: #e8e2d9;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
 
 @layer utilities {
-  .font-display { font-family: var(--font-display), serif; }
-  .font-body    { font-family: var(--font-body), sans-serif; }
-  .font-mono    { font-family: var(--font-mono), monospace; }
-
-  .text-balance { text-wrap: balance; }
-
-  .grain {
-    position: relative;
-  }
-  .grain::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    border-radius: inherit;
-  }
-
-  .invoice-shadow {
-    box-shadow:
-      0 1px 2px rgba(33,30,26,0.04),
-      0 4px 12px rgba(33,30,26,0.06),
-      0 16px 40px rgba(33,30,26,0.08);
-  }
-
-  .card-shadow {
-    box-shadow:
-      0 1px 2px rgba(33,30,26,0.04),
-      0 2px 8px rgba(33,30,26,0.06);
-  }
-
-  .animate-delay-100 { animation-delay: 100ms; }
-  .animate-delay-200 { animation-delay: 200ms; }
-  .animate-delay-300 { animation-delay: 300ms; }
-  .animate-delay-400 { animation-delay: 400ms; }
-  .animate-delay-500 { animation-delay: 500ms; }
-
-  .opacity-0-init { opacity: 0; }
-}
-
-/* Print styles for invoice PDF export */
-@media print {
-  body { background: white !important; }
-  .no-print { display: none !important; }
-  .print-only { display: block !important; }
-  .invoice-paper {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-}
-
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #d9d4c7; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #bfb8a6; }
-
-/* Input focus ring */
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(240,180,41,0.4);
+  .font-display { font-family: 'Playfair Display', serif; }
 }

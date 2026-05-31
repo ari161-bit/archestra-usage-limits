@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'InvoiceFlow — Beautiful Invoices in Seconds',
-  description: 'Create, send, and get paid with stunning professional invoices. Built for freelancers and small businesses.',
+  title: 'Pathfinder – Scholarship Intelligence',
+  description: 'Your personal scholarship intelligence platform',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-body antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
