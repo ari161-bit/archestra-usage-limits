@@ -125,7 +125,7 @@ export function selectCriticalLimit(
 
   if (applicable.length === 0) return null
 
-  return applicable.reduce<UsageLimit>((critical, limit) => {
+  return applicable.reduce((critical, limit) => {
     const criticalRemaining = critical.total - critical.used
     const limitRemaining    = limit.total    - limit.used
 

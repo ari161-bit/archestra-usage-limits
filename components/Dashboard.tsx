@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Search, ArrowRight, CheckCircle2, Circle, Flame, TrendingUp, ExternalLink } from 'lucide-react'
-import type { Page } from '@/app/page'
+import type { Page } from '@/lib/navigation'
 
 const APPLICATIONS = [
   { id: 1, name: 'Gates Cambridge Scholarship', date: 'Oct 15, 2026', days: 137, status: 'In Progress', statusColor: '#1a3a2a', statusText: '#4ade80', dot: '#4ade80' },

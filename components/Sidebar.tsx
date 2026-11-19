@@ -1,7 +1,7 @@
 'use client'
 
 import { LayoutDashboard, GraduationCap, Brain, Bot, ListChecks, Calendar, BookOpen, Bell, ChevronRight } from 'lucide-react'
-import type { Page } from '@/app/page'
+import type { Page } from '@/lib/navigation'
 
 const NAV_MAIN = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
